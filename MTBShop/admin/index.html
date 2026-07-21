@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MTBShop Admin</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="admin">
+
+<h1>Панель разработчика</h1>
+
+<p>Добавление новой запчасти</p>
+
+<input
+id="title"
+placeholder="Название товара"
+>
+
+<input
+id="price"
+type="number"
+placeholder="Цена"
+>
+
+<select id="category">
+
+<option>Покрышки</option>
+
+<option>Вилки</option>
+
+<option>Тормоза</option>
+
+<option>Колёса</option>
+
+<option>Рамы</option>
+
+<option>Рули</option>
+
+<option>Выносы</option>
+
+<option>Педали</option>
+
+<option>Трансмиссия</option>
+
+<option>Другое</option>
+
+</select>
+
+<textarea
+id="description"
+placeholder="Описание товара"
+></textarea>
+
+<input
+type="text"
+id="image"
+placeholder="Вставьте ссылку на фотографию">
+
+<button id="publish">
+
+Опубликовать товар
+
+</button>
+
+<p id="status"></p>
+
+</div>
+
+<script type="module" src="./sсript.js"></script>
+<div id="adminProducts"></div>
+</body>
+</html>

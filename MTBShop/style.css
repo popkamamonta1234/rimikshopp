@@ -1,0 +1,509 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    }
+    
+    
+    body{
+    background:#090909;
+    color:white;
+    }
+    
+    
+    /* МЕНЮ */
+    
+    #menuBtn{
+    
+    position:fixed;
+    top:20px;
+    left:20px;
+    
+    z-index:10000;
+    
+    font-size:30px;
+    
+    background:#111;
+    color:white;
+    
+    border:2px solid #76ff00;
+    
+    border-radius:12px;
+    
+    padding:8px 15px;
+    
+    cursor:pointer;
+    
+    }
+    
+    
+    
+    #menu{
+    
+    position:fixed;
+    
+    top:0;
+    left:-320px;
+    
+    width:300px;
+    height:100vh;
+    
+    background:#141414;
+    
+    padding:25px;
+    
+    transition:.4s;
+    
+    z-index:9999;
+    
+    }
+    
+    
+    
+    #menu.active{
+    
+    left:0;
+    
+    }
+    
+    
+    
+    .menuHeader{
+    
+    display:flex;
+    
+    justify-content:space-between;
+    
+    align-items:center;
+    
+    }
+    
+    
+    
+    #closeMenu{
+    
+    background:none;
+    
+    border:none;
+    
+    color:white;
+    
+    font-size:25px;
+    
+    }
+    
+    
+    
+    #menu input{
+    
+    width:100%;
+    
+    padding:12px;
+    
+    margin:15px 0;
+    
+    background:#222;
+    
+    border:1px solid #555;
+    
+    color:white;
+    
+    }
+    
+    
+    
+    #loginDeveloper{
+    
+    width:100%;
+    
+    padding:12px;
+    
+    background:#76ff00;
+    
+    border:none;
+    
+    cursor:pointer;
+    
+    }
+    
+    
+    
+    #menu a{
+    
+    display:block;
+    
+    color:white;
+    
+    text-decoration:none;
+    
+    margin:20px 0;
+    
+    }
+    
+    
+    
+    
+    
+    /* ГЛАВНЫЙ БАННЕР */
+    
+    .hero{
+    
+    height:650px;
+    
+    position:relative;
+    
+    display:flex;
+    
+    align-items:center;
+    
+    justify-content:center;
+    
+    text-align:center;
+    
+    
+    background:
+    
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.85)
+    ),
+    
+    url("images/freeride.jpg")
+    
+    center/cover;
+    
+    
+    }
+    
+    
+    
+    .heroOverlay{
+    
+    position:relative;
+    
+    z-index:2;
+    
+    width:100%;
+    
+    display:flex;
+    
+    flex-direction:column;
+    
+    align-items:center;
+    
+    }
+    
+    
+    
+    .heroOverlay h1{
+    
+    font-size:90px;
+    
+    font-weight:900;
+    
+    letter-spacing:5px;
+    
+    }
+    
+    
+    
+    .heroOverlay h2{
+    
+    color:#76ff00;
+    
+    margin:20px 0;
+    
+    font-size:30px;
+    
+    }
+    
+    
+    
+    .heroOverlay p{
+    
+    font-size:22px;
+    
+    margin-bottom:30px;
+    
+    }
+    
+    
+    
+    #search{
+    
+    width:400px;
+    
+    max-width:90%;
+    
+    padding:16px;
+    
+    border-radius:30px;
+    
+    border:none;
+    
+    font-size:18px;
+    
+    text-align:center;
+    
+    }
+    
+    
+    
+    
+    
+    /* КАТЕГОРИИ */
+    
+    
+    .categories{
+    
+    display:flex;
+    
+    gap:15px;
+    
+    justify-content:center;
+    
+    flex-wrap:wrap;
+    
+    padding:30px;
+    
+    }
+    
+    
+    
+    .category{
+    
+    background:#171717;
+    
+    color:white;
+    
+    border:1px solid #76ff00;
+    
+    padding:12px 20px;
+    
+    border-radius:30px;
+    
+    cursor:pointer;
+    
+    }
+    
+    
+    
+    .category:hover,
+    .category.active{
+    
+    background:#76ff00;
+    
+    color:black;
+    
+    }
+    
+    
+    
+    
+    
+    /* КАТАЛОГ */
+    
+    
+    .catalog{
+    
+    padding:40px;
+    
+    text-align:center;
+    
+    }
+    
+    
+    
+    .catalog h2{
+    
+    font-size:40px;
+    
+    color:#76ff00;
+    
+    }
+    
+    
+    
+    #products{
+    
+    margin-top:40px;
+    
+    display:grid;
+    
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    
+    gap:25px;
+    
+    }
+    
+    
+    
+    
+    
+    /* ТОВАРЫ */
+    
+    
+    .product{
+    
+    background:#151515;
+    
+    border-radius:20px;
+    
+    padding:20px;
+    
+    border:1px solid #333;
+    
+    transition:.3s;
+    
+    }
+    
+    
+    
+    .product:hover{
+    
+    transform:translateY(-8px);
+    
+    border-color:#76ff00;
+    
+    }
+    
+    
+    
+    .product img{
+    
+    width:100%;
+    
+    height:220px;
+    
+    object-fit:cover;
+    
+    border-radius:15px;
+    
+    }
+    
+    
+    
+    .price{
+    
+    font-size:25px;
+    
+    font-weight:bold;
+    
+    color:#76ff00;
+    
+    }
+    
+    
+    
+    .product button{
+    
+    width:100%;
+    
+    margin-top:15px;
+    
+    padding:13px;
+    
+    background:#76ff00;
+    
+    border:none;
+    
+    border-radius:10px;
+    
+    font-weight:bold;
+    
+    cursor:pointer;
+    
+    }
+    
+    
+    
+    
+    
+    /* КОНТАКТЫ */
+    
+    
+    .favorites,
+    .contacts{
+    
+    padding:40px;
+    
+    text-align:center;
+    
+    }
+    
+    
+    
+    .contacts a{
+    
+    color:#76ff00;
+    
+    font-size:22px;
+    
+    }
+    
+    
+    
+    footer{
+    
+    text-align:center;
+    
+    background:#050505;
+    
+    padding:30px;
+    
+    color:#777;
+    
+    }
+    
+    
+    
+    
+    
+    /* ТЕЛЕФОН */
+    
+    
+    @media(max-width:600px){
+    
+    
+    .hero{
+    
+    height:500px;
+    
+    }
+    
+    
+    
+    .heroOverlay h1{
+    
+    font-size:45px;
+    
+    }
+    
+    
+    
+    .heroOverlay h2{
+    
+    font-size:20px;
+    
+    }
+    
+    
+    
+    .heroOverlay p{
+    
+    font-size:16px;
+    
+    }
+    
+    
+    
+    .catalog{
+    
+    padding:20px;
+    
+    }
+    
+    
+    }
